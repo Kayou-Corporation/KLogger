@@ -1,13 +1,16 @@
 #pragma once
 
+#include <cstdint>
+
+
 namespace Debug
 {
-    enum class LogLevel : unsigned int
+    enum class LogLevel : uint16_t
     {
-        VERBOSE = 0,
-        INFO = 1,
-        WARNING = 2,
-        ERROR = 3,
-        CRITICAL = 4
+        TRACE       = 0x0001,   // 1
+        INFO        = 0x0002,   // 2
+        WARNING     = 0x0004,   // 4
+        ERROR       = 0x0008,   // 8
+        CRITICAL    = 0x0010    // 16
     };
 }
