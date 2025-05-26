@@ -3,7 +3,7 @@
 #include <cstdint>
 
 
-namespace Debug
+namespace KLogger
 {
     enum class LogLevel : uint16_t
     {

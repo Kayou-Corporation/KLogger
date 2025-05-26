@@ -60,7 +60,7 @@ endif()
 #---------------------------------------#
 #                INCLUDE                #
 #---------------------------------------#
-target_include_directories(KLOGGER PUBLIC "Code/Include")
+target_include_directories(KLOGGER PUBLIC "Code/Include" "Code/Interface")
 
 
 
