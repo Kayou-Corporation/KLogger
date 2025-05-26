@@ -101,6 +101,7 @@ set_target_properties(KLOGGER PROPERTIES OUTPUT_NAME "${PROJECT_NAME}-${PROJECT_
 #               LINK LIBRARIES          #
 #---------------------------------------#
 target_link_libraries(KLOGGER PUBLIC fmt::fmt)
+target_link_libraries(KLOGGER PUBLIC KQUEUE)
 
 option(BUILD_EXECUTABLE "Build an executable to live debug the logger" ON)
 
