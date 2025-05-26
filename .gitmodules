@@ -1,3 +1,6 @@
 [submodule "Libs/fmt"]
 	path = Libs/fmt
 	url = https://github.com/fmtlib/fmt.git
+[submodule "Libs/kqueue"]
+	path = Libs/kqueue
+	url = https://github.com/Kayou-Corporation/KQueue.git
