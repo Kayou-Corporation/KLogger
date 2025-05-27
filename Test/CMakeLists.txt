@@ -42,4 +42,4 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 
 
-target_link_libraries(KLOGGER_TEST PRIVATE KRHI)
+target_link_libraries(KLOGGER_TEST PRIVATE KLOGGER)
