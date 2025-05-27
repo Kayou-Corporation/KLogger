@@ -32,11 +32,8 @@ namespace KLogger
             std::source_location location;
 
             template <typename LogMessage>
-            explicit FormatLocation(LogMessage&& a_logMessage,
-                                    const std::source_location a_location = std::source_location::current()) :
-                format(std::forward<LogMessage>(a_logMessage)), location(a_location)
-            {
-            }
+            explicit FormatLocation(LogMessage&& a_logMessage, const std::source_location a_location = std::source_location::current())
+                                    : format(std::forward<LogMessage>(a_logMessage)), location(a_location) { }
         };
     };
 }

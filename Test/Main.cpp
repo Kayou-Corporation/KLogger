@@ -10,7 +10,7 @@ int main()
 
     try
     {
-        KLogger::Logger::Get().Init("MyLogger", 1_MiB, 3, true);
+        KLogger::Logger::Get().Init();
         std::cout << "Success!\n";
     }
     catch (_exception)

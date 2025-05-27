@@ -2,6 +2,7 @@
 
 #include <string_view>
 #include <source_location>
+#include <utility>
 
 #include "LogChannel.hpp"
 #include "LogLevel.hpp"
@@ -17,7 +18,7 @@ namespace KLogger
         std::source_location location = std::source_location::current();
 
         template <typename Message>
-        inline explicit LogContent(Message&& logMessage, const LogLevel logLevel = LogLevel::TRACE, const LogChannel logChannel = LogChannel("Global"), std::source_location logLocation = std::source_location::current())
-                            : level(logLevel), channel(logChannel), message(std::forward<Message>(logMessage)) {}
+        inline explicit LogContent(Message&& logMessage, const LogLevel logLevel = LogLevel::TRACE, LogChannel  logChannel = LogChannel("Global"), std::source_location logLocation = std::source_location::current())
+                            : level(logLevel), channel(std::move(logChannel)), message(std::forward<Message>(logMessage)) {}
     };
 }
